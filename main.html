@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>바보 테스트</title>
+    <style>
+    body {
+  font-family: sans-serif;
+}
+
+.file-upload {
+            margin: 0 auto;
+            padding: 13% 5%;
+            border: solid 1.5px ;
+            background-color: #f6f7fa;
+            border-color: #e9dd3d;
+          }
+          .file-upload-btn:hover {
+  background: #e9dd3d;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.file-upload-btn:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+  border-color: #e9dd3d;
+}
+
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 4px dashed #e9dd3d;
+  position: relative;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #e9dd3d;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #e9dd3d;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  border-bottom: 4px solid #e9dd3d;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+
+.title{
+font-family:NanumSquareR;
+font-size:44.5px;
+line-height:1.67;
+text-align:center;
+color:#35465d;
+text-align: center;
+    margin-top: 3rem;
+    font-weight: 600;
+}
+
+.subtitle{
+font-family:NanumSquareR;
+font-size:33px;
+line-height:1.53;
+text-align:center;
+color:#35465d;
+margin-bottom: 70px;
+text-align: center;
+    margin-top: 3rem;
+    font-weight: 400;
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+.image-upload-wrap {
+    margin-top: 20px;
+    border: 4px dashed #e9dd3d;
+    position: relative;
+    object-fit: contain;
+    border: dashed 2px #e9dd3d;
+    background-color : #ffffff;   
+}
+.image-dropping, 
+.image-upload-wrap:hover {
+    background-color: #f8f296;
+    border: 2px dashed   #ffffff;
+}
+
+.file-upload {
+margin: 0 auto;
+padding: 13% 5%;
+border: solid 1.5px #f6f7fa;
+background-color: #f6f7fa;
+}
+
+.file-upload-content {
+  display: none;
+  text-align: center;
+}
+
+.file-upload-input {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.image-upload-wrap {
+  margin-top: 20px;
+  border: 4px dashB264;
+  position: relative;
+}
+
+.image-title-wrap {
+  padding: 0 15px 15px 15px;
+  color: #e9dd3d;
+}
+
+.drag-text {
+  text-align: center;
+}
+
+.file-upload-image {
+  max-height: 200px;
+  max-width: 200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.remove-image {
+  width: 200px;
+  margin: 0;
+  color: #fff;
+  background: #c13b2a;
+  border: none;
+  padding: 10px;
+  border-radius: 2px;
+  transition: all .2s ease;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 1.5rem;
+}
+
+.remove-image:hover {
+  background: #c13b2a;
+  color: #ffffff;
+  transition: all .2s ease;
+  cursor: pointer;
+}
+
+.remove-image:active {
+  border: 0;
+  transition: all .2s ease;
+}
+/* On screens that are 600px or less, set the background color to olive */
+
+@media screen and (max-width: 600px) {
+  html {
+    font-size: 10px;
+  }
+    .navbar-brand {
+        font-size: 2rem;
+    }
+}
+
+.image-upload-wrap {
+    margin-top: 20px;
+    border: 4px dashed #e9dd3d;
+    position: relative;
+    object-fit: contain;
+    border: dashed 2px #ccc;
+    background-color: #ffffff;
+}
+
+.caution{
+    text-align: center;
+    margin-top: 2rem;
+    font-size:15px;
+}
+
+.babo-info{
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+    color: black;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: NanumSquareR;
+}   
+.babo-name{
+    margin-bottom: 3rem;
+    margin-top: 1.5rem;
+    color: black;
+    font-size: 30px;
+    font-weight: 400;
+    font-family: NanumSquareR;
+}
+.image-upload-wrap{
+    border-color:yellow;
+}
+</style>
+</head>
+<body>
+    <h1 class="title">바보 테스트</h1>
+    <h2 class="subtitle">나는 과연 바보 일까?</h2>
+    <h5 class="caution">📌사진은 어디에도 저장되지 않으니 걱정하지 마세요📌</h5>
+    <script class="jsbin" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<div class="file-upload">
+  <div class="image-upload-wrap" >
+    <input class="file-upload-input" type='file' onchange="readURL(this);" accept="image/*" />
+    <div class="drag-text">
+      <h1>클릭 하여 사진을 업로드 하세요</h1>
+    </div>
+  </div>
+  <div class="file-upload-content">
+    <img class="file-upload-image" src="#" alt="your image" />
+    <div class="image-title-wrap">
+        <div class="babo-name"></div>
+        <div class="babo-info"></div>
+      <button type="button" onclick="removeUpload()" class="remove-image">다시하기 </button>
+    </div>
+  </div>
+</div>
+<script>
+    n();
+    function readURL(input) {
+  if (input.files && input.files[0]) {
+
+    var reader = new FileReader();
+
+    reader.onload = function(e) {
+    number();
+      $('.image-upload-wrap').hide();
+      $('.file-upload-image').attr('src', e.target.result);
+      $('.file-upload-content').show();
+
+      $('.image-title').html(input.files[0].name);
+    };
+
+    reader.readAsDataURL(input.files[0]);
+
+  } else {
+    removeUpload();
+  }
+}
+
+function removeUpload() {
+  $('.file-upload-input').replaceWith($('.file-upload-input').clone());
+  $('.file-upload-content').hide();
+  $('.image-upload-wrap').show();
+}
+$('.image-upload-wrap').bind('dragover', function () {
+$('.image-upload-wrap').addClass('image-dropping');
+});
+$('.image-upload-wrap').bind('dragleave', function () {
+$('.image-upload-wrap').removeClass('image-dropping');
+});
+
+function n() {
+    Math.floor(Math.random()*(5-1+1))+1;
+}
+let num = Math.floor(Math.random()*(5-1+1))+1;
+function number() {
+    num = Math.floor(Math.random()*(5-1+1))+1;
+if(num === 1) {
+document.querySelector(".babo-name").innerHTML="천재"
+document.querySelector(".babo-info").innerHTML="천재다!!!! 으~ 재수없어."
+}else if(num === 2) {
+document.querySelector(".babo-name").innerHTML="정상인"
+document.querySelector(".babo-info").innerHTML="아 정상이야. 노잼 ㅋㅋ"
+}else if(num === 3) {
+document.querySelector(".babo-name").innerHTML="약간 바보"
+document.querySelector(".babo-info").innerHTML="뭐 이정도는 이해해 줄 수 있지 뭐..."
+}else if(num === 4) {
+document.querySelector(".babo-name").innerHTML="바보"
+document.querySelector(".babo-info").innerHTML="바보다!!!!! 이 바보야!!! 바보. ㅋㅋ"
+}else if(num === 5) {
+document.querySelector(".babo-name").innerHTML="엄청난 바보"
+document.querySelector(".babo-info").innerHTML="으악!!!! 천년에 1명 나온다는 바보다!!!!! 모두 대피하라!!"
+}
+}
+</script>
+</body>
+<!--Copyright (c) 2021 by Aaron Vanston (https://codepen.io/aaronvanston/pen/yNYOXR)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.-->
+</html>
